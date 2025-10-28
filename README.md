@@ -1,6 +1,6 @@
 # TicketApp — Twig Implementation
 
-This is the **Twig (PHP)** implementation of the Multi-Framework Ticket Web App. It mirrors the React version's features while using Twig for server-side rendering and client-side JavaScript to simulate auth and ticket storage.
+This is the **Twig (PHP)** implementation of the Multi-Framework Ticket Web App.
 
 ## Features
 - Landing page with wave hero + decorative circles
