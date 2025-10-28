@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>{% block title %}Ticket App{% endblock %}</title>
+  <link rel="stylesheet" href="/assets/main.css">
+</head>
+<body>
+  <div class="container">
+    {% include 'partials/header.twig' %}
+    <main>
+      {% block content %}{% endblock %}
+    </main>
+    {% include 'partials/footer.twig' %}
+  </div>
+
+  <script src="/assets/main.js" defer></script>
+</body>
+</html>

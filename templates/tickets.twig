@@ -1,0 +1,42 @@
+{% extends "base.twig" %}
+{% block title %}Tickets - TicketApp{% endblock %}
+{% block content %}
+<section class="tickets-page">
+  <div class="tickets-toolbar">
+    <h2>Tickets</h2>
+    <button id="create-ticket-btn" class="btn primary">Create Ticket</button>
+  </div>
+
+  <div id="tickets-grid" class="tickets-grid" aria-live="polite"></div>
+
+  <!-- Ticket Modal -->
+  <dialog id="ticket-modal" class="modal">
+    <form method="dialog" id="ticket-form">
+      <h3 id="modal-title">Create Ticket</h3>
+
+      <label for="t-title">Title*</label>
+      <input id="t-title" name="title" required minlength="3" />
+      <div class="error" id="t-title-error"></div>
+
+      <label for="t-status">Status*</label>
+      <select id="t-status" name="status" required>
+        <option value="">Select status</option>
+        <option value="open">open</option>
+        <option value="in_progress">in_progress</option>
+        <option value="closed">closed</option>
+      </select>
+      <div class="error" id="t-status-error"></div>
+
+      <label for="t-desc">Description</label>
+      <textarea id="t-desc" name="description" rows="4" maxlength="1000"></textarea>
+      <div class="error" id="t-desc-error"></div>
+
+      <div class="modal-actions">
+        <button id="save-ticket" class="btn primary">Save</button>
+        <button id="cancel-ticket" class="btn outline" type="button">Cancel</button>
+      </div>
+    </form>
+  </dialog>
+
+</section>
+{% endblock %}

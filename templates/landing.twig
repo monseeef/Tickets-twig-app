@@ -1,0 +1,33 @@
+{% extends "base.twig" %}
+{% block title %}TicketApp — Landing{% endblock %}
+{% block content %}
+<section class="hero">
+  <div class="hero-inner">
+    <h1>TicketApp</h1>
+    <p class="lead">Lightweight ticket manager — multi-framework challenge (Twig version)</p>
+    <div class="cta">
+      <a class="btn primary" href="/auth/signup">Get Started</a>
+      <a class="btn outline" href="/auth/login">Login</a>
+    </div>
+  </div>
+
+  <img src="/assets/wave-hero.svg" alt="decorative wave" class="hero-wave" />
+  <div class="decor-circle circle-1" aria-hidden="true"></div>
+  <div class="decor-circle circle-2" aria-hidden="true"></div>
+</section>
+
+<section class="features">
+  <div class="card">
+    <h3>Simple Auth</h3>
+    <p>Simulated authentication stored in localStorage.</p>
+  </div>
+  <div class="card">
+    <h3>Ticket CRUD</h3>
+    <p>Create, edit, resolve and delete tickets with inline validation.</p>
+  </div>
+  <div class="card">
+    <h3>Responsive</h3>
+    <p>Mobile-first layout, accessible HTML and focus states.</p>
+  </div>
+</section>
+{% endblock %}

@@ -1,0 +1,25 @@
+{% extends "base.twig" %}
+{% block title %}Dashboard - TicketApp{% endblock %}
+{% block content %}
+<section class="dashboard">
+  <h2>Dashboard</h2>
+  <div class="stats-grid">
+    <div class="stat-card">
+      <h3 id="stat-total">0</h3>
+      <p>Total tickets</p>
+    </div>
+    <div class="stat-card">
+      <h3 id="stat-open">0</h3>
+      <p>Open tickets</p>
+    </div>
+    <div class="stat-card">
+      <h3 id="stat-resolved">0</h3>
+      <p>Resolved tickets</p>
+    </div>
+  </div>
+
+  <div class="dashboard-actions">
+    <a href="/tickets" class="btn">Manage Tickets</a>
+  </div>
+</section>
+{% endblock %}

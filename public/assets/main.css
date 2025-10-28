@@ -1,0 +1,241 @@
+:root {
+  --max-width: 1440px;
+  --container-padding: 16px;
+  --green: #16a34a;
+  --amber: #d97706;
+  --gray: #6b7280;
+  --bg: #f6f7fb;
+}
+
+* {
+  box-sizing: border-box;
+}
+body {
+  font-family: Inter, system-ui, sans-serif;
+  margin: 0;
+  background: var(--bg);
+  color: #111;
+}
+.container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 20px;
+}
+.site-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 0;
+}
+.logo {
+  font-weight: 700;
+  font-size: 1.2rem;
+  text-decoration: none;
+  color: #111;
+}
+.nav .nav-link {
+  margin-left: 16px;
+  text-decoration: none;
+  color: #333;
+}
+.btn {
+  padding: 8px 12px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+}
+.btn.primary {
+  background: #2563eb;
+  color: #fff;
+}
+.btn.outline {
+  background: transparent;
+  border: 1px solid #cbd5e1;
+  color: #111;
+}
+.btn-ghost {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  color: #111;
+}
+.hero {
+  position: relative;
+  overflow: visible;
+  padding: 48px 20px;
+  border-radius: 12px;
+  background: linear-gradient(180deg, #fff, #f8fafc);
+  margin-bottom: 24px;
+}
+.hero-inner {
+  max-width: 900px;
+}
+.hero h1 {
+  font-size: 2.2rem;
+  margin: 0 0 8px;
+}
+.lead {
+  color: #374151;
+}
+.hero-wave {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -1px;
+  width: 100%;
+  height: 120px;
+  object-fit: cover;
+}
+.decor-circle {
+  position: absolute;
+  border-radius: 50%;
+  opacity: 0.12;
+}
+.circle-1 {
+  width: 160px;
+  height: 160px;
+  background: #f97316;
+  right: 4%;
+  top: -40px;
+}
+.circle-2 {
+  width: 90px;
+  height: 90px;
+  background: #60a5fa;
+  left: 6%;
+  top: 20px;
+}
+.features {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 16px;
+}
+.card {
+  background: #fff;
+  padding: 18px;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(2, 6, 23, 0.06);
+}
+.auth-page {
+  display: flex;
+  justify-content: center;
+  padding: 40px 20px;
+}
+.auth-card {
+  width: 100%;
+  max-width: 420px;
+  background: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(2, 6, 23, 0.06);
+}
+.auth-card label {
+  display: block;
+  margin-top: 12px;
+  font-weight: 600;
+}
+.auth-card input,
+.auth-card textarea,
+.auth-card select {
+  width: 100%;
+  padding: 10px;
+  margin-top: 6px;
+  border-radius: 8px;
+  border: 1px solid #e6eef8;
+}
+.error {
+  color: #ef4444;
+  font-size: 0.9rem;
+  min-height: 18px;
+  margin-top: 6px;
+}
+.dashboard .stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 16px;
+  margin: 16px 0;
+}
+.stat-card {
+  background: #fff;
+  padding: 16px;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(2, 6, 23, 0.06);
+}
+.tickets-toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.tickets-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 16px;
+  margin-top: 18px;
+}
+.ticket-card {
+  padding: 12px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 6px 16px rgba(2, 6, 23, 0.06);
+}
+.ticket-title {
+  font-weight: 700;
+  margin: 0 0 8px;
+}
+.status-tag {
+  display: inline-block;
+  padding: 6px 8px;
+  border-radius: 999px;
+  font-weight: 600;
+  font-size: 0.85rem;
+  color: #fff;
+}
+.status-open {
+  background: var(--green);
+}
+.status-in_progress {
+  background: var(--amber);
+}
+.status-closed {
+  background: var(--gray);
+}
+.modal {
+  border: none;
+  padding: 0;
+  border-radius: 12px;
+}
+.modal form {
+  padding: 18px;
+}
+.modal-actions {
+  display: flex;
+  gap: 8px;
+  justify-content: flex-end;
+  margin-top: 12px;
+}
+.site-footer {
+  padding: 18px;
+  text-align: center;
+  color: #6b7280;
+  margin-top: 26px;
+}
+
+/* focus states */
+a:focus,
+button:focus,
+input:focus,
+select:focus,
+textarea:focus {
+  outline: 3px solid rgba(37, 99, 235, 0.12);
+  outline-offset: 2px;
+}
+
+/* responsive */
+@media (max-width: 600px) {
+  .hero h1 {
+    font-size: 1.6rem;
+  }
+  .decor-circle {
+    display: none;
+  }
+}
